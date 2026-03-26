@@ -65,8 +65,8 @@ except ImportError as e:
             return pd.DataFrame({'日期': [], 'predicted_CO2eq': [], 'lower_bound': [], 'upper_bound': []})
 
 # 页面配置
-st.set_page_config(page_title="污水处理甲烷智能监测与调控系统", layout="wide", page_icon="🌍")
-st.header("寻清问碳：构建低碳目标下的污水处理甲烷智能监测与调控系统")
+st.set_page_config(page_title="污水处理甲烷监测调控与智慧科普系统", layout="wide", page_icon="🌍")
+st.header("寻清问碳：基于智能体与数字孪生的污水处理甲烷监测调控与智慧科普系统")
 
 
 # 初始化session_state
@@ -974,22 +974,22 @@ with st.sidebar:
 
 # 主界面使用选项卡组织内容
 tab0, tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9 = st.tabs([
-    "3D水厂可视化", "工艺流程仿真", "甲烷足迹追踪", "甲烷账户管理", "优化与决策",
-    "甲烷排放预测", "减排技术分析", "因子库管理", "🤖数字人助手", "🎮AI实验室·污水处理闯关"
+    "3D水厂仿真", "2D工艺流程可视化", "甲烷足迹追踪", "甲烷账户管理", "优化与决策",
+    "甲烷排放预测", "减排技术分析", "因子库管理", "🤖智能助手", "🎮AI实验室·污水处理闯关"
 ])
 
 with tab0:
-    st.header("3D 水厂数字孪生虚拟仿真")
+   # st.header("3D 水厂数字孪生虚拟仿真")
     
     # 显示模式说明
-    st.info("🚀 **数字孪生模式**：基于Three.js的物理级渲染，支持实时光影、动态水面、点击工艺区查看详情并编辑参数")
-    st.divider()
+    # st.info("🚀 **数字孪生模式**：基于Three.js的物理级渲染，支持实时光影、动态水面、点击工艺区查看详情并编辑参数")
+    # st.divider()
     
     # 使用Three.js数字孪生3D可视化（已删除Plotly 3D）
     render_advanced_3d_tab(st.session_state.unit_data)
 
 with tab1:
-    st.header("2D水厂工艺流程仿真")
+    st.header("2D水厂工艺流程可视化")
 
     # 创建两列布局
     col1, col2 = st.columns([3, 1])
@@ -2619,12 +2619,12 @@ with tab8:
     try:
         render_digital_human_tab()
     except Exception as e:
-        st.error(f"数字人助手加载失败: {e}")
+        st.error(f"智能助手加载失败: {e}")
         st.info("请确保digital_human_agent.py和coze_api.py文件存在且正确")
         
         # 显示简单的备用界面
-        st.header("🤖 数字人助手")
-        st.warning("数字人助手暂时不可用，请检查文件配置")
+        st.header("🤖 智能助手")
+        st.warning("智能助手暂时不可用，请检查文件配置")
         
         col1, col2 = st.columns(2)
         with col1:
@@ -2674,7 +2674,7 @@ with tab9:
         ### 📋 游戏特点
         
         - **3个精心设计的关卡**：预处理、生物处理、深度处理
-        - **互动式学习**：拖拽工艺模块，按正确顺序排列
+        - **互动式学习**：点击工艺模块，按正确顺序排列
         - **实时反馈**：即时检查答案，提供详细解析
         - **科普知识**：丰富的污水处理小知识
         
