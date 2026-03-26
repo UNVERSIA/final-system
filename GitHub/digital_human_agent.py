@@ -611,11 +611,11 @@ def render_digital_human_tab():
     """
     init_session_state()
     
-    st.header("🤖 3D数字人智能助手")
+    st.header("🤖 智能助手")
     
     # 页面说明
     st.info("""
-    🎉 欢迎来到数字人助手！我是「烷仔」，你的污水处理智能助手。
+    🎉 欢迎来到智能助手！我是「烷仔」，你的污水处理智能助手。
     
     我可以帮你：
     - 解答水厂工艺流程相关问题
